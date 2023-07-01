@@ -1,6 +1,8 @@
+// Required Library
 const readline = require('readline')
 
 
+// Creates the interface to allow for console readline to work correctly
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
