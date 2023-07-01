@@ -32,6 +32,7 @@ class Task {
         return `${day}/${month}/${year}`;
     }
 
+
     // Calculates the due date and returns it in a nice format.
     calculateDueDate() {
         // Add 2 weeks (14 days) to the base date
@@ -50,6 +51,7 @@ class Task {
 }
 
 
+
 // Get the current day/time
 console.log()
 const d = new Task()
@@ -66,6 +68,7 @@ const tasks = []
 function mainController() {
 // Display options
 menuOptions();
+
 
   // Run logic to select an option
   rl.question('Select an option: ', (answer) => {
@@ -98,7 +101,6 @@ menuOptions();
       }
   });
 }
-
 
 
 // Function that allows you to edit a specific task
@@ -137,12 +139,6 @@ function editTask() {
     }
 }
   
-  
-
-
-
-
-
 
 // Function that displays the tasks
 function displayTasks() {
@@ -155,12 +151,10 @@ function displayTasks() {
             console.log(`${i + 1}. ${item.title}: ${item.task}\nSet: ${item.currentDate} - Due: ${item.dueDate}\n`)    
         });
 
-        // console.log("\nthis is the start of the test:")
-        // console.log(task[1])
-
         mainController()
     }
 }
+
 
 function menuOptions() {
     console.log('Please select an option below: ');
@@ -171,7 +165,9 @@ function menuOptions() {
     console.log('5. Exit');
 }
 
+
 function createNewTask() {
+
 
 rl.question('Enter task title: ', (title) => {
     rl.question('Enter task description: ', (task) => {
@@ -188,6 +184,33 @@ rl.question('Enter task title: ', (title) => {
     });
 });
 }
+
+
+
+
+// Future Ideas:
+// (Just didn't have enough time to complete them right now)
+
+// *************************************
+// Due Tasks:
+// If the task is "due today" meaning that the due date is equal to the current date,
+// display the task at the bottom of the menu.
+// Also, create a "requires update" to be added to the task so that it will be placed back into the tasks array.
+
+// To test this,
+// When created, make it so that the due date is "today", add that task to a "due" array.
+// *************************************
+
+
+// *************************************
+// Save Data
+// Create a way that will allow you to save the data into a JSON file or database.
+//    Convert the task array into a JSON format,
+//    Populate a form-looking-sheet with the JSON data from the tasks
+//    Allow a user to print or copy the sheet so it can be used later.
+// *************************************
+
+
 
 // Start the program
 mainController();
