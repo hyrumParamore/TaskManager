@@ -52,25 +52,16 @@ class Task {
     
 }
 
-
-
-// Get the current day/time
-console.log()
-const d = new Task()
-console.log(d)
-console.log()
-console.log(d.calculateDueDate())
-console.log()
-
   
 // This is the array that will hold all of the tasks that are created.
 const tasks = []
   
+
 // Display the menu
 function mainController() {
-// Display options
-menuOptions();
-
+  
+  // Display options
+  menuOptions();
 
   // Run logic to select an option
   rl.question('Select an option: ', (answer) => {
