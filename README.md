@@ -4,9 +4,8 @@ This program that I decided to do was to create a task manager program that is w
 
 The purpose of writing this program was to test my skills on building ideas that I have, planning them out in detail- hand-writing out the logic, and then creating it. It also allows me to practice JavaScript and use it in a way that I've never done before, that being making it all terminal based through Node.js and using Readline.js. It has also been really good practice with working with, arrays that contain objects, classes, and methods. And it has helped me to practice figuring out different forms of logic that are presented with the different problems that have arisen.
 
-<!-- {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code.} -->
 
-[Software Demo Video](http://youtube.link.goes.here)
+[JavaScript Project - Task Manager Program](https://youtu.be/t57JqTsXx0I)
 
 
 # Development Environment

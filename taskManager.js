@@ -59,7 +59,7 @@ const tasks = []
 
 // Display the menu
 function mainController() {
-  
+
   // Display options
   menuOptions();
 
@@ -81,7 +81,7 @@ function mainController() {
           // This closes the program
           console.log('\nSave Task Items\n');
           console.log(JSON.stringify(tasks, null, 2));
-
+          mainController()
       } else if (answer === '5') {
         // This closes the program
         console.log('\nClosing interface.');
@@ -160,22 +160,20 @@ function menuOptions() {
 
 
 function createNewTask() {
+  rl.question('Enter task title: ', (title) => {
+      rl.question('Enter task description: ', (task) => {
+      const newTask = new Task(title, task);
+      tasks.push(newTask) // Adds the task to an array to hold them all.
 
+      // Print out the newly added task.
+      console.log('\nNew Task:');
+      console.log(`Title: ${newTask.title}`);
+      console.log(`Task: ${newTask.task}`);
+      console.log();
 
-rl.question('Enter task title: ', (title) => {
-    rl.question('Enter task description: ', (task) => {
-    const newTask = new Task(title, task);
-    tasks.push(newTask) // Adds the task to an array to hold them all.
-
-    // Print out the newly added task.
-    console.log('\nNew Task:');
-    console.log(`Title: ${newTask.title}`);
-    console.log(`Task: ${newTask.task}`);
-    console.log();
-
-    mainController(); // Go back to the main menu.
-    });
-});
+      mainController(); // Go back to the main menu.
+      });
+  });
 }
 
 
